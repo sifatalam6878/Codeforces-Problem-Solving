@@ -1,5 +1,6 @@
-# Competitive Programming junk files
+# Ignore helper and junk files
 .cph/
+.vscode/
 *.exe
 *.out
 *.bin
