@@ -80,22 +80,22 @@ bool valid(int x, int y, int n, int m) {
 
 int main() {
     FAST;
-    int n,k;
-    cin >> n >> k;
-    int a[55];
+    int n;
+    cin >> n;
+    int x=0;
+    string s;
     for(int i=0;i<n;i++)
     {
-        cin >> a[i];
-    }
-    int res=a[k-1];
-    int cnt=0;
-    for(int i=0;i<n;i++)
-    {
-        if(a[i]>=res&&a[i]>0)
+        cin >> s;
+        if(s[0]=='+'||s[1]=='+')
         {
-            cnt++;
+            x++;
+        }
+        else
+        {
+            x--;
         }
     }
-    cout << cnt << endl;
+    cout << x << endl;
     return 0;
 }
