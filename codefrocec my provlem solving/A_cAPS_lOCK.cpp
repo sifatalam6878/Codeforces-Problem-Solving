@@ -80,13 +80,30 @@ bool valid(int x, int y, int n, int m) {
 
 int main() {
     FAST;
-    int a,b,c,d, x;
-    cin >> a >> b >> c >> d >> x;
-    int res = 0;
-    for(int i=1;i<=x;i++)
-        if(i % a == 0 || i % b == 0 || i % c == 0 || i % d == 0)
-            res++;
-    cout << res;
-
-    return 0;
+    string x;
+    cin >> x;
+    bool done = true;
+    for(int i=1;i<x.size();i++)
+    {
+        if(!isupper(x[i]))
+           done = false;
+    }
+    bool res = true;
+    for(int i=0;i<x.size();i++)
+    {
+        if(!isupper(x[i]))
+           res = false;
+    }
+    if(done || res)
+    {
+        for(int i=0;i<x.size();i++)
+        {
+            if(isupper(x[i]))
+              x[i] = tolower(x[i]);
+            else
+              x[i] = toupper(x[i]);
+        }
+    }
+    cout << x;
+        return 0;
 }
